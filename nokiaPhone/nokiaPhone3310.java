@@ -80,39 +80,84 @@ public class nokiaPhone3310{
             System.out.println(welcome);
             boolean inMenu = true;
             while (inMenu){
-               System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s", "MENU",
-                                               "1. Phone book",
-                                               "2. Messages",
-                                               "3. Chat",
-                                               "4. Call register",
-                                               "5. Tones",
-                                               "6. Settings",
-                                               "7. Call divert",
-                                               "8. Games",
-                                               "9. Calculator",
-                                               "10. Reminders",
-                                               "11. Clocks",
-                                               "12. Profiles",
-                                               "13. SIM services",
-                                               "0. To turn off the phone",
-                                                "press a button 1 - 13 to access MAIN MENU options: ");
+               String menu = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |        Main Menu       |
+                | 1.  Phone book         |
+                | 2.  Messages           |
+                | 3.  Chat               |
+                | 4.  Call register      |
+                | 5.  Tones              |
+                | 6.  Settings           |
+                | 7.  Call divert        |
+                | 8.  Games              |
+                | 9.  Calculator         |
+                | 10. Reminders          |
+                | 11. Clock              |
+                | 12. Profiles           |
+                | 13. SIM Service        |
+                | 0.  Switch off phone   |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+               System.out.println(menu);
+               System.out.printf("%s%n", "press a button 1 - 13 to access MAIN MENU options: ");
                 int mainMenu = pressButton.nextInt();
 
                     switch (mainMenu){
-                       case 1: System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s", 
-                                                               "Phone book", 
-                                                       "1. Search",
-                                                       "2. Service Nos. ",
-                                                       "3. Add name",
-                                                       "4. Erase",
-                                                       "5. Edit",
-                                                       "6. Assign tone",
-                                                       "7. Send b'card",
-                                                       "8. Options",
-                                                       "9. Speed dails",
-                                                       "10. Voice tags",
-                                                        "0. Back to main menu",
-                                                       "press a number to select other Phone book options: ");
+                       case 1: String optionOne = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |        Phone book      |
+                | 1.  Search             |
+                | 2.  Service Nos.       |
+                | 3.  Add name           |
+                | 4.  Erase              |
+                | 5.  Edit               |
+                | 6.  Assign tone        |
+                | 7.  Send b'card        |
+                | 8.  Options            |
+                | 9.  Speed dails        |
+                | 10. Voice tags         |
+                | 0.  Back to main menu  |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionOne);
+                System.out.printf("%s%n", "press a number to select other Phone book options: ");
                                                          boolean ifInPhoneBook = true;
                                                          while(ifInPhoneBook){  int phoneBook = pressButton.nextInt();
                                                              
@@ -141,13 +186,13 @@ public class nokiaPhone3310{
                                                                                                 while(ifInOptions){   int options = pressButton.nextInt();
          
                                                                                                    switch (options){
-                                                                                                        case 1: System.out.printf("%s%n", "Type of view");
+                                                                                                       case 1: System.out.printf("%s%n", "Type of view");
                                                                                                                 break;
-                                                                                                        case 2: System.out.printf("%s%n", "Memory status");
+                                                                                                       case 2: System.out.printf("%s%n", "Memory status");
                                                                                                                 break;
-                                                                                                        case 0: ifInOptions = false; System.out.printf("%s%n","Back");
+                                                                                                       case 0: ifInOptions = false; System.out.printf("%s%n","Back");
                                                                                                                 break;
-                                                                                                        default: System.out.printf("%s%n", "O_O not an option");
+                                                                                                       default: System.out.printf("%s%n", "O_O not an option");
                                                                                                     }
                                                                                                  }
                                                                         break;
@@ -160,20 +205,44 @@ public class nokiaPhone3310{
                                                                 }
                                                             }
                            break;
-                        case 2: System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s", 
-                                                               "Messages",
-                                                       "1. Write message",
-                                                       "2. Inbox",
-                                                       "3. Outbox",
-                                                       "4. Picture messages",
-                                                       "5. Templates",
-                                                       "6. Smileys",
-                                                       "7. Message Settings",
-                                                       "8. Info service",
-                                                       "9. Voice mailbox number",
-                                                       "10. Service command editor",
-                                                        "0. Go back Main Menu",
-                                                       "press a number to select other Message options: " );
+                        case 2: String optionTwo = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |         Messages       |
+                | 1.  Write message      |
+                | 2.  Inbox              |
+                | 3.  Outbox             |
+                | 4.  Picture messages   |
+                | 5.  Templates          |
+                | 6.  Smileys            |
+                | 7.  Message Settings   |
+                | 8.  Info service       |
+                | 9.  Voice mailbox      |
+                |     number             |
+                | 10. Service command    |
+                |     editor             |
+                | 0.  Back to main menu  |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionTwo);
+                System.out.printf("%s%n","press a number to select other Message options: " );
                                                     boolean ifInMessages = true;
                                                     while(ifInMessages){ int messages = pressButton.nextInt();
                                                              
@@ -206,19 +275,19 @@ public class nokiaPhone3310{
                                                                                                         "3. Message validity",
                                                                                                         "0. Go back to Message Settings",
                                                                                                         "Press a number to from 1-3: ");
-                                                                                                      boolean ifInSetOne = true;
-                                                                                                      while(ifInSetOne){  int setOne = pressButton.nextInt();
+                                                                                                  boolean ifInSetOne = true;
+                                                                                                  while(ifInSetOne){  int setOne = pressButton.nextInt();
          
-                                                                                                        switch (setOne){
-                                                                                                        case 1: System.out.printf("%s%n", "Message centre number");
+                                                                                                  switch (setOne){
+                                                                                                    case 1: System.out.printf("%s%n", "Message centre number");
                                                                                                             break;
-                                                                                                        case 2: System.out.printf("%s%n", "Messages sent as");
+                                                                                                    case 2: System.out.printf("%s%n", "Messages sent as");
                                                                                                             break;
-                                                                                                        case 3: System.out.printf("%s%n", "Message validity");
+                                                                                                    case 3: System.out.printf("%s%n", "Message validity");
                                                                                                             break;
-                                                                                                        case 0: ifInSetOne = false; System.out.printf("%s%n", "Go Back");
-                                                                                                                break;
-                                                                                                        default: System.out.printf("%s%n", "O_O not an option");
+                                                                                                    case 0: ifInSetOne = false; System.out.printf("%s%n", "Go Back");
+                                                                                                            break;
+                                                                                                    default: System.out.printf("%s%n", "O_O not an option");
                                                                                                          }
                                                                                                       }
                                                                                                  break;
@@ -263,8 +332,43 @@ public class nokiaPhone3310{
                                                              }
                                                         }
                             break;
-                         case 3:boolean ifInChat = true;
-                                  while(ifInChat) { System.out.printf("%s%n%s%n%s","Chat", "0. Go back to Main Menu","press button 0 to go back: ");
+                         case 3: String optionThree = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |          Chat          |
+                |                        |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionThree);
+                                  boolean ifInChat = true;
+                                  while(ifInChat) { System.out.printf("%s%n", "press button 0 to go back: ");
                                                          int chat = pressButton.nextInt();
                                                           switch (chat){
                                                             case 0: ifInChat = false; System.out.printf("%s%n", "Go back"); break;
@@ -272,17 +376,42 @@ public class nokiaPhone3310{
                                                            }
                                   }
                             break;  
-                         case 4: System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s","Call register", 
-                                                       "1. Missed calls",
-                                                        "2. Received Calls",
-                                                        "3. Dialled numbers",
-                                                        "4. Erase recent call lists",
-                                                        "5. Show call duration",
-                                                        "6. Show call costs",
-                                                        "7. Call cost setttings",
-                                                        "8. Prepaid credit",
-                                                        "0. Go Back to the Main menu",
-                                                        "press a number to select other Call register options: ");
+                         case 4: String optionFour = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |     Call register      |
+                | 1.  Missed calls       |
+                | 2.  Received Calls     |
+                | 3.  Dialled numbers    |
+                | 4.  Erase recent call  |
+                |     lists              |
+                | 5.  Show call duration |            
+                | 6.  Show call costs    |
+                | 7.  Call cost settting |
+                | 8.  Prepaid credit     |
+                | 0.  Back to main menu  |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionFour);
+                System.out.printf("%s%n", "press a number to select other Call register options: ");
                                                          boolean ifInCallRegister = true;
                                                          while(ifInCallRegister){  int callRegister = pressButton.nextInt();
                                                               switch (callRegister){
@@ -302,23 +431,23 @@ public class nokiaPhone3310{
                                                                                     "5. Clear timers",
                                                                                     "0. Go Back To Call Register",
                                                                                     "press a number to select other Show call duration options: ");
-                                                                                   boolean ifInShowCallDuration = true;
-                                                                                   while(ifInShowCallDuration){  int showCallDuration = pressButton.nextInt();
-                                                                                      switch (showCallDuration){
-                                                                                         case 1: System.out.printf("%s%n", "Last call duration");
-                                                                                                break;
-                                                                                         case 2: System.out.printf("%s%n", "All call's duration");
-                                                                                                break;
-                                                                                         case 3: System.out.printf("%s%n", "Recieved calls' duration");
-                                                                                                break;
-                                                                                         case 4: System.out.printf("%s%n", "Dialled calls' duration");
-                                                                                                break;
-                                                                                         case 5: System.out.printf("%s%n", "Clear timers");
-                                                                                                break;
-                                                                                         case 0: ifInShowCallDuration = false; System.out.printf("%s%n", "Clear timers");
-                                                                                                break;
-                                                                                          default: System.out.printf("%s%n", "O_O not an option");
-                                                                                                break;
+                                                                                  boolean ifInShowCallDuration = true;
+                                                                                  while(ifInShowCallDuration){  int showCallDuration = pressButton.nextInt();
+                                                                                   switch (showCallDuration){
+                                                                                    case 1: System.out.printf("%s%n", "Last call duration");
+                                                                                               break;
+                                                                                    case 2: System.out.printf("%s%n", "All call's duration");
+                                                                                               break;
+                                                                                    case 3: System.out.printf("%s%n", "Recieved calls' duration");
+                                                                                               break;
+                                                                                    case 4: System.out.printf("%s%n", "Dialled calls' duration");
+                                                                                               break;
+                                                                                    case 5: System.out.printf("%s%n", "Clear timers");
+                                                                                               break;
+                                                                                    case 0: ifInShowCallDuration = false; System.out.printf("%s%n", "Clear timers");
+                                                                                               break;
+                                                                                       default: System.out.printf("%s%n", "O_O not an option");
+                                                                                               break;
                                                                                             }
                                                                                    }
                                                                     break;
@@ -370,18 +499,42 @@ public class nokiaPhone3310{
                                                               }
                                                             }
                             break;
-                         case 5: System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s","Tones",
-                                                       "1. Ringing tone",
-                                                       "2. Ringing volume",
-                                                       "3. Incoming call alert",
-                                                       "4. Composer",
-                                                       "5. Message alert tone",
-                                                       "6. Keypad tones",
-                                                       "7. Warning and game tones",
-                                                       "8. Vibrating alert",
-                                                       "9. Screen saver",
-                                                       "0. Go back to Main Menu",
-                                                       "press a number to select other Tones options: ");
+                         case 5: String optionFive = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |          Tones         |
+                | 1.  Ringing tone       |
+                | 2.  Ringing volume     |
+                | 3.  Incoming call alert|
+                | 4.  Composer           |
+                | 5.  Message alert tone |            
+                | 6.  Keypad tones       |
+                | 7.  Warning and game   |
+                |     tones              |
+                | 8.  Vibrating alert    |
+                | 9.  Screen saver       |
+                | 0.  Back to main menu  |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionFive);
+                System.out.printf("%s%n", "press a number to select other Tones options: ");
                                                          boolean ifInTones = true;
                                                          while(ifInTones){
                                                             int tones = pressButton.nextInt();
@@ -410,13 +563,42 @@ public class nokiaPhone3310{
                                                               }
                                                           }
                             break;
-                         case 6: System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s","Settings",
-                                                        "1. Call settings",
-                                                        "2. Phone settings",
-                                                        "3. Security settings",
-                                                        "4. Restore factory settings",
-                                                        "0. Go Back to Main Menu",
-                                                        "press a number to select other Settings options: ");
+                         case 6: String optionSix = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |        Settings        |
+                | 1.  Call settings      |
+                | 2.  Phone settings     |
+                | 3.  Security settings  |
+                | 4.  Factory Settings   |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionSix);
+                System.out.printf("%s%n", "press a number to select other Settings options: ");
                                                          boolean ifInSettings = true;
                                                          while(ifInSettings){
                                                             int settings = pressButton.nextInt();
@@ -526,8 +708,43 @@ public class nokiaPhone3310{
                                                                }
                                                          }
                             break;
-                         case 7:boolean ifInCallDivert = true;
-                                  while(ifInCallDivert) { System.out.printf("%s%n%s%n%s","Call divert", "0. Go back","press 0 to go back: ");
+                         case 7:String optionSeven = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |       Call divert      |
+                |                        |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionSeven);
+                                  boolean ifInCallDivert = true;
+                                  while(ifInCallDivert) { System.out.printf("%s%n", "press 0 to go back: ");
                                                          int callDivert = pressButton.nextInt();
                                                           switch (callDivert){
                                                             case 0: ifInCallDivert = false; System.out.printf("%s%n", "Go back"); break;
@@ -535,8 +752,43 @@ public class nokiaPhone3310{
                                                            }
                                   }
                             break;
-                         case 8:boolean ifInGames = true;
-                                  while(ifInGames) { System.out.printf("%s%n%s%n%s%n%s","Games", "0. Go back", "1. Snake II", "press 0 to go back: ");
+                         case 8:String optionEight = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |          Games         |
+                | 1.  Snake II           |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionEight);
+                                  boolean ifInGames = true;
+                                  while(ifInGames) { System.out.printf("%s%n", "press 0 to go back: ");
                                                          int games = pressButton.nextInt();
                                                           switch (games){
                                                             case 1: System.out.printf("%s%n", "Snake II"); break;
@@ -545,8 +797,43 @@ public class nokiaPhone3310{
                                                            }
                                   }
                             break;
-                         case 9:boolean ifInCalculator = true;
-                                  while(ifInCalculator) { System.out.printf("%s%n%s%n%s","Calculator", "0. Go back","press 0 to go back: ");
+                         case 9:String optionNine = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |          Chat          |
+                |                        |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionNine);
+                                  boolean ifInCalculator = true;
+                                  while(ifInCalculator) { System.out.printf("%s%n","press 0 to go back: ");
                                                          int calculator = pressButton.nextInt();
                                                           switch (calculator){
                                                             case 0: ifInCalculator = false; System.out.printf("%s%n", "Go back"); break;
@@ -554,8 +841,43 @@ public class nokiaPhone3310{
                                                            }
                                   }
                             break;
-                         case 10: boolean ifInReminders = true;
-                                  while(ifInReminders) { System.out.printf("%s%n%s%n%s","Reminders", "0. Go back","press button 0 to go back: ");
+                         case 10: String optionTen = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |        Reminders       |
+                |                        |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionTen);
+                                  boolean ifInReminders = true;
+                                  while(ifInReminders) { System.out.printf("%s%n", "press button 0 to go back: ");
                                                          int reminders = pressButton.nextInt();
                                                           switch (reminders){
                                                             case 0: ifInReminders = false;  System.out.printf("%s%n", "back"); break;
@@ -563,15 +885,42 @@ public class nokiaPhone3310{
                                                            }
                                   }                  
                             break;
-                         case 11: System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s","Clock",
-                                                       "1. Alarm clock",
-                                                       "2. Clock settings",
-                                                       "3. Date settings",
-                                                       "4. Stopwatch",
-                                                       "5. Countdown timer",
-                                                       "6. Auto update of date and time",
-                                                       "0. back",
-                                                       "press a number to select other Clock options: ");
+                         case 11: String optionEleven = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |          Clock         |
+                | 1.  Alarm clock        |
+                | 2.  Clock settings     |
+                | 3.  Date settings      |
+                | 4.  Stopwatch          |
+                | 5.  Countdown timer    |
+                | 6.  Auto update of     |
+                |     date and time      |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionEleven);
+                System.out.printf("%s%n", "press a number to select other Clock options: ");
                                                         boolean ifInClockOption = true;
                                                         while(ifInClockOption) {
                                                             int clock = pressButton.nextInt();
@@ -595,8 +944,43 @@ public class nokiaPhone3310{
                                                                }
                                                          }
                             break;
-                         case 12:boolean ifInProfiles = true;
-                                  while(ifInProfiles) { System.out.printf("%s%n%s%n%s","Profiles", "0. Back", "press 0 to go back: ");
+                         case 12:String optionTwelve = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |         Profiles       |
+                |                        |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionTwelve);
+                                  boolean ifInProfiles = true;
+                                  while(ifInProfiles) { System.out.printf("%s%n", "press 0 to go back: ");
                                                          int profiles = pressButton.nextInt();
                                                           switch (profiles){
                                                             case 0: ifInProfiles = false; System.out.printf("%s%n", "Go back"); break;
@@ -604,8 +988,43 @@ public class nokiaPhone3310{
                                                            }
                                   }
                             break;
-                         case 13:boolean ifInSIMservices = true;
-                                  while(ifInSIMservices) { System.out.printf("%s%n%s%n%s","SIM services", "0. Back", "press 0 to go back:" );
+                         case 13:String optionThirteen = String.format ("""                
+                __________________________  
+                |                   3310 |
+                |                        |
+                |          NOKIA         |
+                |________________________|
+                |       SIM service      |
+                |                        |
+                | 0.  Back to main menu  |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |                        |
+                |________________________|
+                |                        |
+                |          menu          | 
+                |                        |
+                | power           <  >   |
+                |                        |
+                |    1              3    |
+                            2             
+                |    4              6    |
+                            5             
+                |    7              9    |
+                            8             
+                |                        |
+                            0             
+                |________________________|   """
+                                             );
+                System.out.println(optionThirteen);
+                                  boolean ifInSIMservices = true;
+                                  while(ifInSIMservices) { System.out.printf("%s%n", "press 0 to go back:" );
                                                          int simServices = pressButton.nextInt();
                                                           switch (simServices){
                                                             case 0: ifInSIMservices = false; System.out.printf("%s%n", "Go back"); break;
