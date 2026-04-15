@@ -314,7 +314,7 @@ public class nokiaPhone3310{
                                                                                                          }
                                                                                                        }
                                                                                                  break;
-                                                                                               case 0: ifInMessageSettings = false; System.out.printf("%s%","Back");
+                                                                                               case 0: ifInMessageSettings = false; System.out.printf("%s%n","Back");
                                                                                                      break;
                                                                                                default: System.out.printf("O_O not an option");
                                                                                            }
