@@ -8,10 +8,11 @@ public class LoopValueinFraction{
         double count = 0;
      
         for (;count <= 48; count++){
-         sum += numerator / denominator;
+         sum += (double)numerator / (double)denominator;
+            System.out.printf("%d%s%d%s%.2f%n", numerator, "/", denominator, " = ", sum);
          numerator += 2;
          denominator += 2;
-            System.out.printf("%d%s%d%s%.2f%n", numerator, "/", denominator, " = ", sum);
+            
         }
       System.out.printf("%s%.2f%n", "The sum total is = ", sum);
     }
