@@ -1,11 +1,12 @@
 import java.util.Scanner;
-public class ScoresandSum{
+public class SumAndAverage{
     public static void main(String[] args){
 
     Scanner inputCollector = new Scanner(System.in);
         
         int scores = 0; 
         int sum = 0;
+        int average = 0;
         int count = 1;
         for(; count<= 10; count++){
         System.out.printf("Enter a number: ");
@@ -14,10 +15,10 @@ public class ScoresandSum{
         System.out.printf("%d%n", scores);
         sum += scores;
         
-            System.out.printf("%d%s%n",sum, "The sum of all the numbers");
+            System.out.printf("%n%d%s%n",sum, " = The sum of all the numbers");
         }
-        
-System.out.printf("%d%s%n", sum, " = the sum of the 10 scores");
+        average = sum/10;
+System.out.printf("%d%s%n", average, " = the Average of the 10 scores");
 
     }
 }
