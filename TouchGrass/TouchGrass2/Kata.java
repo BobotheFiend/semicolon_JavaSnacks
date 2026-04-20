@@ -9,6 +9,7 @@ public class Kata{
     squareOf (12);
     factorialOf (9);
     isPerfectSquare (25);
+    factorOf(12);
     }
 
 
@@ -99,6 +100,17 @@ public class Kata{
             System.out.printf("%d%s%n", number, " is not a perfect square");
             return false;
         }
+     }
+    public static int factorOf (int numbers){
+        int factors = numbers;
+        int count = 1;
+     
+        for (;count <= numbers; count++){
+          if (numbers % count == 0)
+            System.out.printf("%s%d%s%d%n","The Factors of ", numbers, " are: ", count );
+        
+            }
+          return count;
      }
 }
 
