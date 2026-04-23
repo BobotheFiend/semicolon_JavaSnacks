@@ -2,7 +2,7 @@ public class Kata{
     public static void main(String[] args){
     
     maximum (419, 234);
-    isEven (234);
+    boolean evenNumbers = isEven (234);
     subtract (333, 999);
     divide (22,2);
     isPalindrome (50105);
@@ -10,6 +10,7 @@ public class Kata{
     factorialOf (9);
     isPerfectSquare (25);
     factorOf(12);
+    boolean prime = isPrimeNumber(25);
     }
 
 
@@ -64,7 +65,7 @@ public class Kata{
         int digitFive = digitFour/10;
         int digitRemainderFive = digitFour % 10;
         
-        if (digitRemainderOne == digitRemainderFive){
+        if (digitRemainderOne == digitRemainderFive && digitRemainderTwo == digitRemainderFour){
         System.out.printf("%d ---> %d%d%d%d%d, the number is a Palindrome%n", number, digitRemainderOne,digitRemainderTwo,digitRemainderThree,digitRemainderFour,digitRemainderFive);
         return true;
             }   
@@ -112,5 +113,23 @@ public class Kata{
             }
           return count;
      }
+    public static boolean isPrimeNumber(int number){
+     
+     int count = 1;
+     int factors = 0;
+    for(;count <= number; count++){
+     if (number % count == 0){
+        factors++;
+       }
+    }
+     if (factors > 2){
+    return false;
+    }
+
+     else if (factors == 2){
+    
+        }
+        return true;
+    }
 }
 

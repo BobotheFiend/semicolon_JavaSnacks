@@ -803,7 +803,7 @@ public class nokiaPhone3310{
                 |                        |
                 |          NOKIA         |
                 |________________________|
-                |          Chat          |
+                |        Calculator      |
                 |                        |
                 | 0.  Back to main menu  |
                 |                        |
