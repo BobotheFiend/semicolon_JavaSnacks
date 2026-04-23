@@ -4,16 +4,15 @@ public class TabularOutput{
 
         int number = 5;
         int count = 1;
-
+        System.out.printf("N   N2    N3    N4%n");
         for(; count <= number; count++){
-            //System.out.printf("N%d%n", count);
-            for(int power = 1; power <= number; power++){
-                System.out.printf("N%d", count);
-                System.out.print(" ");
-                System.out.print(power*count);
-            }
-            System.out.printf("%n");
+            
+            int square = count*count;
+            int cube = count*count*count;
+            int raisedtoFour = count*count*count*count;
+            System.out.printf("%d    %d    %d    %d%n", count, square, cube, raisedtoFour);
         }
+        
     }
 }
     
