@@ -74,16 +74,19 @@ public class PizzaWahala{
         String pizzaTypeMenu = pizzaType(choiceOfPizzaType);
         int costOfBoxes = (int)pricePerBox(choiceOfPizzaType);
         int pizzaSlices = numberOfSlices(choiceOfPizzaType);
-        int howManyBoxes = (numberOfPeople / pizzaSlices) +1;
-        int totalAmountOfPizzaSLicesOrdered = howManyBoxes * pizzaSlices;
-        int totalPriceForCustomerToPay =  howManyBoxes * costOfBoxes;
+        double howManyBoxes = (numberOfPeople / pizzaSlices);
+               if (numberOfPeople % pizzaSlices != 0){
+                 howManyBoxes ++;
+               }
+        int totalAmountOfPizzaSLicesOrdered = (int)howManyBoxes * pizzaSlices;
+        int totalPriceForCustomerToPay =  (int)howManyBoxes * costOfBoxes;
         int leftoverSlices = Math.abs(numberOfPeople - totalAmountOfPizzaSLicesOrdered);
 
-        System.out.printf("%nThe number of boxes of pizza to buy = %d boxes(%s size contains %d slices per box, %d boxes should be sufficent for %d persons as it would contain %d slices in all)%n", howManyBoxes,pizzaTypeMenu,pizzaSlices,howManyBoxes,numberOfPeople,totalAmountOfPizzaSLicesOrdered);
+        System.out.printf("%nThe number of boxes of pizza to buy = %.0f boxes(%s size contains %d slices per box, %.0f boxes should be sufficent for %d persons as it would contain %d slices in all)%n", howManyBoxes,pizzaTypeMenu,pizzaSlices,howManyBoxes,numberOfPeople,totalAmountOfPizzaSLicesOrdered);
 
         System.out.printf("%nThe Number of left over slices after serving = %d slices (explanation: After serving %d slices, you should have %d slices left)%n",leftoverSlices, numberOfPeople, leftoverSlices);
 
-        System.out.printf("%nPrice = N %d (explanation: %d per box for %d boxes)%n", totalPriceForCustomerToPay, costOfBoxes, howManyBoxes);
+        System.out.printf("%nPrice = N %d (explanation: %d per box for %.0f boxes)%n", totalPriceForCustomerToPay, costOfBoxes, howManyBoxes);
         }
 }
         
