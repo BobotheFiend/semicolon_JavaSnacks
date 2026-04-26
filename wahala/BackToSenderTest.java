@@ -7,13 +7,13 @@ public class BackToSenderTest{
 	@Test
 	public void testThatRidersWagesAreReturned(){
 		//Given
-		int number = 80;
+		int diliveryNumber = 80;
 		
 		//When
-		int expectedWageForTheDay = BackToSender.ridersPayment(number);
+		int actualWageForTheDay = BackToSender.ridersPayment(diliveryNumber);
 
 		//check
-		int actualWageForTheDay = 45000;
+		int expectedWageForTheDay = 45000;
 		assertEquals(actualWageForTheDay, expectedWageForTheDay);
 	}
 }
