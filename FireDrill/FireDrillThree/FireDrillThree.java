@@ -36,7 +36,7 @@ public class FireDrillThree{
     public static int taskFour(int [] collections){
         
         int count = 0;
-        for(;count < collections.length; count+=2){
+        for(;count <= collections.length; count+=2){
              System.out.printf("%2d,", collections[count]);  
         }
         return collections[count];
