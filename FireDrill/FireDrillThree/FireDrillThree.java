@@ -36,15 +36,15 @@ public class FireDrillThree{
     public static int taskFour(int [] collections){
         
         int count = 0;
-        for(;count < collections.length; count+2){
+        for(;count < collections.length; count+=2){
              System.out.printf("%2d,", collections[count]);  
         }
-        return collections[counter];
+        return collections[count];
         
     }
     public static int taskFive(int [] collections){
         int count = 1;
-        for(;count < collections.length; count+2){
+        for(;count < collections.length; count+=2){
 
             System.out.printf("%2d,", collections[count]);
         }
@@ -56,7 +56,7 @@ public class FireDrillThree{
         int count = 0;
         int sum = 0;
 
-        for(;count < collections.length; count+2){
+        for(;count < collections.length; count+=2){
             sum += collections[count];
              System.out.printf("%5d", collections[count]);
         }
@@ -68,7 +68,7 @@ public class FireDrillThree{
         int count = 1;
         int sum = 0;
 
-        for(;count < collections.length; count+2){
+        for(;count < collections.length; count+=2){
             sum += collections[count];
              System.out.printf("%5d", collections[count]);
         }
