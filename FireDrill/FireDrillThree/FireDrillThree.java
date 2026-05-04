@@ -3,12 +3,12 @@ public class FireDrillThree{
      //java.util.Scanner input = new java.util.Scanner(System.in);
      //System.out.print("Enter a Score: ");
      //int score = 0; //input.nextInt();
-     int [] collections = {2,6,5,10,33,44,55,66,88,99,77};
+     
      taskOne();
-     System.out.printf("The even elements in the index: %d%n", taskFour(collections));
-     System.out.printf("The odd elements in the index: %d%n", taskFive(collections));
-     System.out.printf("The sum of the even elements in the index: %d%n", taskSix(collections));
-     System.out.printf("The sum of the odd elements in the index: %d%n", taskSeven(collections));
+     System.out.printf("The even elements in the index: "); taskFour();
+     System.out.printf("The odd elements in the index:"); taskFive();
+     System.out.printf("The sum of the even elements in the index: "); taskSix();
+     System.out.printf("The sum of the odd elements in the index:"); taskSeven();
     }
 
     public static void taskOne(){
@@ -33,26 +33,24 @@ public class FireDrillThree{
         System.out.printf("Horizontally %s%n",java.util.Arrays.toString(collections));
 
     }
-    public static int taskFour(int [] collections){
-        
+    public static void taskFour(){
+        int [] collections = {2,6,5,10,33,44,55,66,88,99,77};
         int count = 0;
-        for(;count <= collections.length; count+=2){
+        for(;count < collections.length-3; count+=2){
              System.out.printf("%2d,", collections[count]);  
-        }
-        return collections[count];
-        
+        }      
     }
-    public static int taskFive(int [] collections){
+    public static void taskFive(){
+        int [] collections = {2,6,5,10,33,44,55,66,88,99,77};
         int count = 1;
         for(;count < collections.length; count+=2){
 
             System.out.printf("%2d,", collections[count]);
         }
-        return collections[count];
     }
 
-    public static int taskSix(int [] collections){
-
+    public static void taskSix(){
+        int [] collections = {2,6,5,10,33,44,55,66,88,99,77};
         int count = 0;
         int sum = 0;
 
@@ -60,11 +58,10 @@ public class FireDrillThree{
             sum += collections[count];
              System.out.printf("%5d", collections[count]);
         }
-        return sum;
     }
     
-    public static int taskSeven(int [] collections){
-
+    public static void taskSeven(){
+        int [] collections = {2,6,5,10,33,44,55,66,88,99,77};
         int count = 1;
         int sum = 0;
 
@@ -72,6 +69,5 @@ public class FireDrillThree{
             sum += collections[count];
              System.out.printf("%5d", collections[count]);
         }
-        return sum;
     }
 }
