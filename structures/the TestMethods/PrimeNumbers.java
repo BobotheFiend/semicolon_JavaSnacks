@@ -1,13 +1,14 @@
 public class PrimeNumbers{
   
     public static boolean isPrime(int number){
-        
-        int count = 2;
+        int checker = 0;
+        int count = 1;
         for(;count <= number/2; count++){
             if (number % count == 0){
-            return false;
+              if (checker == 2)
+            return true;
             }
         }         
-        return true;
+        return false;
     }
 }
