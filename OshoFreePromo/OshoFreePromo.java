@@ -14,7 +14,7 @@ public class OshoFreePromo{
    Less that N5,000    |      0%       |  STARTER10(not applicable below N5k)  |
    N5,000 - N14,999    |     10%       |             STARTER10                 |
    N15,000 - N29,999   |     20%       |              BIGBOY20                 |
-   N30,000 - N29.990   |     35%       |              OSHOFREE35               |
+   N30,000 - N29.990   |     35%       |             OSHOFREE35                |
 ________________________________________________________________________________"""
        );
 

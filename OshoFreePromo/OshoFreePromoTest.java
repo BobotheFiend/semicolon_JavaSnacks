@@ -74,8 +74,11 @@ public class OshoFreePromoTest{
     int firstPrice = 30000;
     int secondPrice = 50000;
     int thirdPrice = 2994899;
+
     String promo = "OSHOFREE35";
+
     int actualDiscount = 35;
+
     int expectedDiscountAmountOne = OshoFreePromo.discountPriceRange(firstPrice, promo);
     assertEquals(actualDiscount, expectedDiscountAmountOne);
 
@@ -84,6 +87,60 @@ public class OshoFreePromoTest{
     
     int expectedDiscountAmountThree= OshoFreePromo.discountPriceRange(thirdPrice, promo);
     assertEquals(actualDiscount, expectedDiscountAmountThree);
+    }
+
+
+            @Test
+    public void testThatChecksThePricesConditionsRetrnsFalseInAnyOfTheDiscountPromo(){
+
+    int firstPrice = 10000;
+    int secondPrice = 100;
+    int thirdPrice = 4999;
+    int fourthPrice = 5000;
+    int fifthPrice = 7000;
+    int sixthPrice = 100000;
+
+    String tenPercentpromo = "STARTER10";
+    String twentyPercentPromo = "BIGBOYS20";
+    String thirtyFivePercentPromo = "OSHOFREE35";
+    String wrongPromoCode = "STARTER419";
+
+    int actualDiscount = 0;
+    int actualDiscountForTen = 10;
+    int actualDiscountForTwenty = 20;
+    int actualDiscountForThirtyFive = 35;
+
+    int expectedDiscountAmountOne = OshoFreePromo.discountPriceRange(firstPrice, tenPercentpromo);
+    assertEquals(actualDiscountForTen, expectedDiscountAmountOne);
+
+    int expectedDiscountAmountTwo = OshoFreePromo.discountPriceRange(secondPrice, tenPercentpromo);
+    assertEquals(actualDiscount, expectedDiscountAmountTwo);
+    
+    int expectedDiscountAmountThree= OshoFreePromo.discountPriceRange(thirdPrice, tenPercentpromo);
+    assertEquals(actualDiscount, expectedDiscountAmountThree);
+
+    int expectedDiscountAmountFour= OshoFreePromo.discountPriceRange(fourthPrice, thirtyFivePercentPromo);
+    assertEquals(actualDiscount, expectedDiscountAmountFour);
+
+    int expectedDiscountAmountFive= OshoFreePromo.discountPriceRange(fifthPrice, wrongPromoCode);
+    assertEquals(actualDiscount, expectedDiscountAmountFive);
+
+    int expectedDiscountAmountSix= OshoFreePromo.discountPriceRange(thirdPrice, wrongPromoCode);
+    assertEquals(actualDiscount, expectedDiscountAmountSix);
+
+    int expectedDiscountAmountSeven= OshoFreePromo.discountPriceRange(sixthPrice, twentyPercentPromo);
+    assertEquals(actualDiscount, expectedDiscountAmountSeven);
+
+    int expectedDiscountAmountEight= OshoFreePromo.discountPriceRange(sixthPrice, wrongPromoCode);
+    assertEquals(actualDiscount, expectedDiscountAmountEight);
+
+    int expectedDiscountAmountNine= OshoFreePromo.discountPriceRange(secondPrice, wrongPromoCode);
+    assertEquals(actualDiscount, expectedDiscountAmountNine);
+
+    int expectedDiscountAmountTen= OshoFreePromo.discountPriceRange(fifthPrice, thirtyFivePercentPromo);
+    assertEquals(actualDiscount, expectedDiscountAmountTen);
+
+    
     }
 
 
