@@ -16,25 +16,35 @@ public class SemicolonStore{
     
     java.util.ArrayList<String> collect = new java.util.ArrayList<>();
     String customersName = customerName();
-        String userItems = whatUserBought();
-        int numberOfItems = howManyItems();
-        int costPerUnit = howMuch();
-        String addingItems = addMoreToCart();
-//    String addingItems = ignoresCase("yes");
-    while(!addingItems.replace(" ","").equalsIgnoreCase("no")){
-//        customersName = customerName();
-        userItems = whatUserBought();
-        collect.add(userItems);
-        numberOfItems = howManyItems();
-        costPerUnit = howMuch();
-        addingItems = addMoreToCart();
-    }
+
     //int discount = 
- 
-    for (String items: collect){
-        if (items % 4 == 0)
-        System.out.print(items);        
-        }
+    String [] basket = new String [100];
+    int [] tray = new int [100];
+         int index = 0;
+         int total = 0;
+    String addingItems = "yes";
+    while(!addingItems.replace(" ","").equalsIgnoreCase("no")){
+        String userItems = whatUserBought();
+        basket[++index] = userItems;
+        int numberOfItems = howManyItems();
+        tray[++index] = numberOfItems;
+        int costPerUnit = howMuch();
+        tray[++index] = costPerUnit;
+        total =  costPerUnit * numberOfItems;
+        tray[++index]= total;
+        addingItems = addMoreToCart();
+        basket[++index] = userItems;
+//        System.out.printf("%7s%7d%3d%7d",userItems, numberOfItems,costPerUnit,total);
+    }
+
+        float subTotal = total;
+        float discount = 0.08*total;
+        float vat = 0.175 * total;
+
+        float billTotal = (total - discount) + vat;
+        
+        float amountPaid =  amountToPay();
+        float balance = amountpaid - billTotal;
     System.out.printf("""   
 --------------------------------------------------------------------
 SEMICOLOCN STORES                                                  
@@ -50,24 +60,12 @@ Customer Name: %s
              ITEMS       QTY       PRICE       TOTAL(NGN)          
                                                                    
 -------------------------------------------------------------------
-   %s         %d         %d                                        
-                                                                   
-                                                                   
-                                                                   
-                                                                   
-                                                                   
-                                                                   
-                                                                                                                                    
-                                                                   
-                                                               
-                                                                                                                               
-                                                                   
-                                                                   
-                                                                   
---------------------------------------------------------------------
                     """
-                        ,dateTime,cashier(),customersName,userItems,numberOfItems,costPerUnit);
+                        ,dateTime,cashier(),customersName);
 
+
+
+    
     }
 
     public static String cashier(){
@@ -109,10 +107,18 @@ Customer Name: %s
     }
     public static String addMoreToCart(){
     java.util.Scanner input = new java.util.Scanner(System.in);
-    System.out.print(" Add more items?...  ");
+    System.out.print(" Add more items[Yes/No]?...  ");
     String moreItemsToAdd = input.nextLine();
 
     return moreItemsToAdd;
+    }
+
+    public static int amountToPay(){
+    java.util.Scanner input = new java.util.Scanner(System.in);
+    System.out.print(" Add more items[Yes/No]?...  ");
+    int whatToPay = input.nextInt();
+
+    return whatToPay;
     }
     //public static int 
     //public static int cart(String item, int quantity, int price)
