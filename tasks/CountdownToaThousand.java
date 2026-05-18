@@ -4,9 +4,9 @@ public class CountdownToaThousand{
 
         int count = 0;
         
-        for(count = 0;count <= 9;count++){
+        for(;count <= 9;count++){
             int hundredth = 0;
-            for(hundredth = 0; hundredth <= 9; hundredth++){
+            for(; hundredth <= 9; hundredth++){
                 int tens = 0;
                 for(tens = 0; tens <= 9; tens++){
                     int units = 0;
