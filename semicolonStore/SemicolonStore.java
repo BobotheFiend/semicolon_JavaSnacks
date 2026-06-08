@@ -14,37 +14,34 @@ public class SemicolonStore{
     
     String dateTime = todaysDateNdTime.format(formatDateNdTime);
     
-    java.util.ArrayList<String> collect = new java.util.ArrayList<>();
-    String customersName = customerName();
+    java.util.ArrayList<String> collectNames = new java.util.ArrayList<String> ();
+    java.util.ArrayList<Integer> collectAmount = new java.util.ArrayList<Integer> ();
 
-    //int discount = 
-    String [] basket = new String [100];
-    int [] tray = new int [100];
-         int index = 0;
+        String theCustomersName = customerName();
          int total = 0;
-    String addingItems = "yes";
+    String addingItems = "Yes";
     while(!addingItems.replace(" ","").equalsIgnoreCase("no")){
+        
         String userItems = whatUserBought();
-        basket[++index] = userItems;
+        collectNames.add(userItems);
         int numberOfItems = howManyItems();
-        tray[++index] = numberOfItems;
+        collectAmount.add(numberOfItems);
         int costPerUnit = howMuch();
-        tray[++index] = costPerUnit;
+        collectAmount.add(costPerUnit);
         total =  costPerUnit * numberOfItems;
-        tray[++index]= total;
+        collectAmount.add(total);
         addingItems = addMoreToCart();
-        basket[++index] = userItems;
 //        System.out.printf("%7s%7d%3d%7d",userItems, numberOfItems,costPerUnit,total);
     }
 
-        float subTotal = total;
-        float discount = 0.08*total;
-        float vat = 0.175 * total;
+        double subTotal = total;
+        double discount = 0.08*(float)total;
+        double vat = 0.175 * total;
 
-        float billTotal = (total - discount) + vat;
+        double billTotal = (total - discount) + vat;
         
-        float amountPaid =  amountToPay();
-        float balance = amountpaid - billTotal;
+        double amountPaid =  amountToPay();
+        double balance = amountPaid - billTotal;
     System.out.printf("""   
 --------------------------------------------------------------------
 SEMICOLOCN STORES                                                  
@@ -55,15 +52,24 @@ Date: %s
 Cashier: %s                                                        
 Customer Name: %s                                                  
                                                                    
-===================================================================
-                                                                   
-             ITEMS       QTY       PRICE       TOTAL(NGN)          
-                                                                   
--------------------------------------------------------------------
+=================================================================== 
+
                     """
-                        ,dateTime,cashier(),customersName);
+                        ,dateTime,cashier(),theCustomersName);
 
+        for(int count = 0; count < collectAmount.size(); count++){
 
+            System.out.printf("""
+
+              ITEM        QTY       PRICE              TOTAL(NGN)  
+     
+-------------------------------------------------------------------
+           %s          %d%n     
+
+            """
+                      ,collectNames.get(count), collectAmount.get(count)); 
+            
+        }
 
     
     }
@@ -113,10 +119,10 @@ Customer Name: %s
     return moreItemsToAdd;
     }
 
-    public static int amountToPay(){
+    public static double amountToPay(){
     java.util.Scanner input = new java.util.Scanner(System.in);
-    System.out.print(" Add more items[Yes/No]?...  ");
-    int whatToPay = input.nextInt();
+    System.out.print(" How much is the total bill to pay...  ");
+    double whatToPay = input.nextDouble();
 
     return whatToPay;
     }

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class GasMileage{
-    public static void main(String[] agrs){
+    public static void main(String[] args){
         Scanner inputCollector = new Scanner(System.in);
         
         int total = 0;

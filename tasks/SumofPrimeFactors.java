@@ -2,26 +2,31 @@ import java.util.Scanner;
 public class SumofPrimeFactors{
     public static void main(String[] args){
 
-    Scanner inputCollector = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int number = inputCollector.nextInt();
 
-        int count = 2;
-        int total = 0;
- 
-        for (;count <= number;){
-          if (number % count == 0){
-            System.out.printf("%s%d%s%d%n","The Factors of ", number, " are: ", count );
-            number = number/count;
-            total += count;
+
+        int number = 1;
+        for (; number <= 100 ; number++){
+            
+            boolean isItPrime = true;
+            if (number < 2)
+                isItPrime = false;
+
+            int count = 2;
+            for(; count <= number/2; count++ ){
+
+                if(number % count == 0){
+                    isItPrime = false;
                 }
-                
-          else {
-            count++;
-          }
-        
-        } 
-        System.out.printf("The sum of the factors are %d%n", total);
-    }        
-}       
+            }
+
+            if (isItPrime == true){
+                System.out.printf("%d Is Prime%n", number);        
+            }
+            else{
+                System.out.printf("%d is not Prime%n", number);    
+            }
+        }
+
+    }
+}  
